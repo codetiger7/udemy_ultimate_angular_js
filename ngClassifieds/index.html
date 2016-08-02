@@ -21,12 +21,13 @@
 		</md-toolbar>
 
 		<md-content class="md-padding" layout="row" layout-wrap>
-			<md-card flex="33">
-				<img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="">
+			<md-card ng-repeat="classified in classifieds" flex="30">
+				<img ng-src="{{ classified.image }}" alt="">
 				<md-card-content>
 				<div class="classified-info">
 					<h2 class="md-title">{{ classified.title }}<h2>
-					<h3>{{ classified.price }}</h3>
+						<h2>{{ classified.posted | date:'longDate' }}
+					<h3>{{ classified.price | currency }}</h3>
 					<p>{{ classified.description }}</p>
 				</div>
 				</md-card-content>
