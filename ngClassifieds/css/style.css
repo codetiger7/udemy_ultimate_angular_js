@@ -1,0 +1,10 @@
+button .material-icons{
+  margin-top: 7px;
+  }
+
+  md-card img{
+  width:100%;
+  height:auto;
+  min-height:0px;
+
+  }
